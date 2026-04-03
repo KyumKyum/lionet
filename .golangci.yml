@@ -1,0 +1,29 @@
+run:
+  timeout: 5m
+  go: "1.22"
+
+linters:
+  enable:
+    - errcheck
+    - govet
+    - staticcheck
+    - unused
+    - ineffassign
+    - misspell
+    - gofmt
+    - goimports
+    - bodyclose
+    - gosec
+    - unconvert
+    - unparam
+
+linters-settings:
+  govet:
+    enable-all: true
+  goimports:
+    local-prefixes: github.com/KyumKyum/lionet/v1
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
